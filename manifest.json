@@ -1,10 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "Learn Later Extensions",
-    "description": "Base Level Extension",
-    "version": "1.2",
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "learn-svgrepo-com.png"
+  "manifest_version": 3,
+  "name": "Learn Later",
+  "version": "1.0",
+  "description": "Save words to learn later",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
-  }
+  ]
+}

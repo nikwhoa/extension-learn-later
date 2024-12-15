@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<html>
+  <style>
+    body {
+      width: 300px;
+      height: 300px;
+      overflow-y: scroll;
+    }
+    h1 {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 5px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    li:hover {
+      background-color: #f1f1f1;
+    }
+
+    button {
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    #copy {
+      background-color: #46deab;
+    }
+    #clear {
+      background-color: #f44336;
+    }
+  </style>
   <body>
-    <h1>Popup</h1>
-    <script src="script.js"></script>
+    <h1>Words for learning</h1>
+    <ul id="textList"></ul>
+    <div style="display: flex; justify-content: center; gap: 10px;">
+      <button id="copy">Save Text</button>
+      <button id="clear">Clear All</button>
+    </div>
+    <script src="popup.js"></script>
   </body>
 </html>
